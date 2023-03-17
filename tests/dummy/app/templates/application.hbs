@@ -1,5 +1,18 @@
-{{page-title "Dummy"}}
+<Saetta::Stack @direction='col'>
+  <Saetta::Stack @direction='row'>
+    <Saetta::Button @text='XSmall button' @color='primary' @size='xsmall' />
+    <Saetta::Button @text='Small button' @color='primary' @size='small' />
+    <Saetta::Button @text='Normal button' @color='primary' @size='normal' />
+    <Saetta::Button @text='Large button' @color='primary' @size='large' />
+    <Saetta::Button @text='XLarge button' @color='primary' @size='xlarge' />
+  </Saetta::Stack>
 
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+  <Saetta::Stack @direction='row'>
+    <Saetta::Button @text='Normal button' @color='primary' @size='normal' />
+    <Saetta::Button @text='Danger button' @color='danger' @size='normal' />
+    <Saetta::Button @text='Warning button' @color='warning' @size='normal' />
+    <Saetta::Button @text='Info button' @color='info' @size='normal' />
+    <Saetta::Button @text='Success button' @color='success' @size='normal' />
+    <Saetta::Button @text='Default button' @color='default' @size='normal' />
+  </Saetta::Stack>
+</Saetta::Stack>
