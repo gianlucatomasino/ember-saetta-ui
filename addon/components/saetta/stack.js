@@ -11,4 +11,16 @@ export default class SaettaStackComponent extends Component {
         return 'gap-3';
     }
   }
+
+  get crossAlignment() {
+    switch (this.args.crossAlignment) {
+      case 'top':
+        return 'items-start';
+      case 'bottom':
+        return 'items-end';
+      case 'center':
+      default:
+        return 'items-center';
+    }
+  }
 }

@@ -1,3 +1,8 @@
-<div class='flex {{if (eq @direction "col") "flex-col"}} {{this.gap}}'>
+<div
+  class='flex
+    {{if (eq @direction "col") "flex-col"}}
+    {{this.gap}}
+    {{this.crossAlignment}}'
+>
   {{yield}}
 </div>
