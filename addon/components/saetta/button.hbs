@@ -2,8 +2,9 @@
   type='button'
   class='py-1 px-5 rounded shadow-md
     {{this.color}}
-    {{this.size}}
+    {{size @size}}
     max-w-fit h-min'
+  {{on 'click' this.onClick}}
 >
   {{@text}}
 </button>

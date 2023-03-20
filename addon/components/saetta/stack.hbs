@@ -1,8 +1,9 @@
 <div
   class='flex
     {{if (eq @direction "col") "flex-col"}}
-    {{this.gap}}
-    {{this.crossAlignment}}'
+    {{density @density}}
+    {{size height=@height width=@width}}
+    {{alignment cross=@crossAlignment main=@mainAlignment}}'
 >
-  {{yield}}
+  {{yield (hash item=(component 'saetta/stack/item' density=@density))}}
 </div>

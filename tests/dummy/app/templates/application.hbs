@@ -15,4 +15,16 @@
     <Saetta::Button @text='Success button' @color='success' @size='normal' />
     <Saetta::Button @text='Default button' @color='default' @size='normal' />
   </Saetta::Stack>
+
+  <Saetta::Stack @direction='row'>
+    <Saetta::Button @text='Normal button' @color='primary' @size='normal' />
+    <Saetta::Select
+      @options={{(array 'Option 1' 'Option 2')}}
+      @selected={{this.optSelected}}
+      @onChange={{this.onOptionSelected}}
+      as |option|
+    >
+      {{option}}
+    </Saetta::Select>
+  </Saetta::Stack>
 </Saetta::Stack>

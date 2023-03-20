@@ -43,33 +43,8 @@ export default class SaettaButtonComponent extends Component {
     return classes.join(' ');
   }
 
-  get size() {
-    let classes = [];
-
-    switch (this.args.size) {
-      case 'xsmall':
-        classes.push('text-xs');
-        break;
-      case 'small':
-        classes.push('text-sm');
-        break;
-      case 'large':
-        classes.push('text-lg');
-        break;
-      case 'xlarge':
-        classes.push('text-xl');
-        break;
-      case 'normal':
-      default:
-        classes.push('text-base');
-        break;
-    }
-
-    return classes.join(' ');
-  }
-
   @action
   onClick() {
-    this.args.onClick();
+    if (this.args.onClick) this.args.onClick();
   }
 }
