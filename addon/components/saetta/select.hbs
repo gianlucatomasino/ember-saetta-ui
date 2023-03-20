@@ -1,0 +1,28 @@
+<Saetta::Stack
+  @direction='col'
+  @crossAlignment='start'
+  @density='compact'
+  as |Stack|
+>
+  {{#if @label}}
+    <Stack.item>
+      <div class='text-xs font-medium'>{{@label}}</div>
+    </Stack.item>
+  {{/if}}
+  <Stack.item>
+    <PowerSelect
+      class='border border-gray-300 rounded shadow-md h-9 w-36 bg-white'
+      @options={{@options}}
+      @selected={{@selected}}
+      @triggerComponent={{component 'saetta/select/trigger' selected=@selected}}
+      @dropdownClass='shadow-md rounded border w-full'
+      @onChange={{this.onChange}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      <div class='py-1 px-2 hover:bg-gray-100 cursor-pointer'>
+        {{yield option}}
+      </div>
+    </PowerSelect>
+  </Stack.item>
+</Saetta::Stack>

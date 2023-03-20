@@ -26,5 +26,14 @@
     >
       {{option}}
     </Saetta::Select>
+    <Saetta::Select
+      @label='Select an option'
+      @options={{(array 'Option 1' 'Option 2')}}
+      @selected={{this.optSelected}}
+      @onChange={{this.onOptionSelected}}
+      as |option|
+    >
+      {{option}}
+    </Saetta::Select>
   </Saetta::Stack>
 </Saetta::Stack>
