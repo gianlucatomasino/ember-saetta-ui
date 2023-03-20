@@ -9,4 +9,9 @@ export default class ApplicationController extends Controller {
   onOptionSelected(value) {
     this.optSelected = value;
   }
+
+  @action
+  search(value) {
+    console.log(`Searching... ${value}`);
+  }
 }

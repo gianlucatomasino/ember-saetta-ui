@@ -6,7 +6,7 @@
 >
   {{#if @label}}
     <Stack.item>
-      <div class='text-xs font-medium'>{{@label}}</div>
+      <div class='text-xs font-medium pl-0.5'>{{@label}}</div>
     </Stack.item>
   {{/if}}
   <Stack.item>
@@ -20,7 +20,7 @@
       @renderInPlace={{true}}
       as |option|
     >
-      <div class='py-1 px-2 hover:bg-gray-100 cursor-pointer'>
+      <div class='py-1 px-2 hover:bg-gray-100 cursor-pointer text-gray-800'>
         {{yield option}}
       </div>
     </PowerSelect>
