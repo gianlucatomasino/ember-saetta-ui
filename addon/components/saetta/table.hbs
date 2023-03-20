@@ -1,0 +1,80 @@
+<Saetta::Stack
+  @crossAlignment='stretch'
+  @direction='col'
+  @width={{@width}}
+  @border='all'
+  @shadow='all'
+  @density='none'
+  as |Stack|
+>
+  <Stack.item>
+    <table
+      class='table-auto
+        {{size width=@width}}
+        divide-y divide-neutral-200 rounded'
+    >
+      <thead class='bg-neutral-100'>
+        <tr class='{{text-alignment @colAlignment}}'>
+          {{#each @cols as |col|}}
+            <th class='{{table-density @density}}'>{{col}}</th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody class='divide-y divide-neutral-200'>
+        {{yield (hash row=(component 'saetta/table/row' density=@density))}}
+      </tbody>
+    </table>
+  </Stack.item>
+  <Stack.item>
+    {{#if @hasPagination}}
+      <div
+        class='text-xs pr-5
+          {{table-density @density}}
+          border-t border-gray-300 flex flex-row items-center bg-white rounded-b'
+      >
+        <div class='grow'>
+          <button
+            type='button'
+            class='p-1 text-gray-800 rounded disabled:opacity-25'
+            disabled={{if this.isFirstPage 'disabled' null}}
+            {{on 'click' @onFirstPage}}
+          >
+            <Saetta::Heroicon @icon='chevron-double-left' />
+          </button>
+          <button
+            type='button'
+            class='p-1 text-gray-800 rounded disabled:opacity-25'
+            disabled={{if this.isFirstPage 'disabled' null}}
+            {{on 'click' @onPreviousPage}}
+          >
+            <Saetta::Heroicon @icon='chevron-left' />
+          </button>
+          <button
+            type='button'
+            class='p-1 text-gray-800 rounded disabled:opacity-25'
+            disabled={{if this.isLastPage 'disabled' null}}
+            {{on 'click' @onNextPage}}
+          >
+            <Saetta::Heroicon @icon='chevron-right' />
+          </button>
+          <button
+            type='button'
+            class='p-1 text-gray-800 rounded disabled:opacity-25'
+            disabled={{if this.isLastPage 'disabled' null}}
+            {{on 'click' @onLastPage}}
+          >
+            <Saetta::Heroicon @icon='chevron-double-right' />
+          </button>
+        </div>
+        <div class='font-semibold rounded-b'>
+          Pagina
+          {{@pagination.number}}
+          di
+          {{@pagination.totalPages}}
+          ({{@pagination.totalRecords}}
+          risultati totali)
+        </div>
+      </div>
+    {{/if}}
+  </Stack.item>
+</Saetta::Stack>

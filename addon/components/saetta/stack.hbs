@@ -3,7 +3,9 @@
     {{if (eq @direction "col") "flex-col"}}
     {{density @density}}
     {{size height=@height width=@width}}
-    {{alignment cross=@crossAlignment main=@mainAlignment}}'
+    {{alignment cross=@crossAlignment main=@mainAlignment}}
+    {{border @border}}
+    {{shadow @shadow}}'
   ...attributes
 >
   {{yield (hash item=(component 'saetta/stack/item' density=@density))}}

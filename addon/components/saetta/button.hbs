@@ -1,10 +1,15 @@
 <button
   type='button'
-  class='py-1 px-5 rounded shadow-md
+  class='py-1 px-3 rounded shadow-md
     {{this.color}}
     {{size @size}}
     max-w-fit h-min'
   {{on 'click' this.onClick}}
 >
-  {{@text}}
+  <Saetta::Stack @density='comfortable'>
+    {{#if @icon}}
+      <Saetta::Heroicon @icon={{@icon}} />
+    {{/if}}
+    {{@text}}
+  </Saetta::Stack>
 </button>

@@ -4,6 +4,9 @@ export default helper(function alignment(_, { main, cross }) {
   let classes = [];
 
   switch (cross) {
+    case 'stretch':
+      classes.push('items-stretch');
+      break;
     case 'start':
       classes.push('items-start');
       break;

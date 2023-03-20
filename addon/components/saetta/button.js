@@ -6,31 +6,25 @@ export default class SaettaButtonComponent extends Component {
     let classes = [];
 
     switch (this.args.color) {
-      case 'danger':
-        classes.push('bg-red-600');
-        classes.push('text-white');
-        classes.push('border border-red-600');
+      case 'critical':
+        classes.push('bg-red-100 hover:bg-red-700');
+        classes.push('text-red-700 hover:text-white');
+        classes.push('border border-red-700');
         break;
-      case 'warning':
-        classes.push('bg-orange-600');
-        classes.push('text-white');
-        classes.push('border border-orange-600');
-
-        break;
-      case 'info':
-        classes.push('bg-cyan-600');
-        classes.push('text-white');
-        classes.push('border border-cyan-600');
-        break;
-      case 'success':
-        classes.push('bg-green-600');
-        classes.push('text-white');
-        classes.push('border border-green-600');
+      case 'tertiary':
+        classes.push('bg-white shadow-none');
+        classes.push('text-gray-600');
+        classes.push('border-0 hover:border hover:border-gray-600');
         break;
       case 'primary':
-        classes.push('bg-blue-600');
+        classes.push('bg-blue-600 hover:bg-blue-700');
         classes.push('text-white');
         classes.push('border border-blue-600');
+        break;
+      case 'secondary':
+        classes.push('bg-neutral-50 hover:bg-white');
+        classes.push('text-gray-600');
+        classes.push('border border-gray-600');
         break;
       default:
         classes.push('bg-white-600');
