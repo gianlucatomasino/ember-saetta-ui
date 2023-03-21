@@ -64,11 +64,10 @@
         @width='full'
         @density='comfortable'
         @hasPagination={{true}}
-        @pagination={{this.pagination}}
-        @onFirstPage={{this.onFirstPage}}
-        @onNextPage={{this.onNextPage}}
-        @onPreviousPage={{this.onPreviousPage}}
-        @onLastPage={{this.onLastPage}}
+        @currentPage={{this.currentPage}}
+        @totalRecords={{this.totalRecords}}
+        @totalPages={{this.totalPages}}
+        @onPageChange={{this.onPageChange}}
         as |Table|
       >
         <Table.row as |Row|>

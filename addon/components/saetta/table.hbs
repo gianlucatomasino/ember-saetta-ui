@@ -37,7 +37,7 @@
             type='button'
             class='p-1 text-gray-800 rounded disabled:opacity-25'
             disabled={{if this.isFirstPage 'disabled' null}}
-            {{on 'click' @onFirstPage}}
+            {{on 'click' this.onFirstPage}}
           >
             <Saetta::Heroicon @icon='chevron-double-left' />
           </button>
@@ -45,7 +45,7 @@
             type='button'
             class='p-1 text-gray-800 rounded disabled:opacity-25'
             disabled={{if this.isFirstPage 'disabled' null}}
-            {{on 'click' @onPreviousPage}}
+            {{on 'click' this.onPreviousPage}}
           >
             <Saetta::Heroicon @icon='chevron-left' />
           </button>
@@ -53,7 +53,7 @@
             type='button'
             class='p-1 text-gray-800 rounded disabled:opacity-25'
             disabled={{if this.isLastPage 'disabled' null}}
-            {{on 'click' @onNextPage}}
+            {{on 'click' this.onNextPage}}
           >
             <Saetta::Heroicon @icon='chevron-right' />
           </button>
@@ -61,17 +61,17 @@
             type='button'
             class='p-1 text-gray-800 rounded disabled:opacity-25'
             disabled={{if this.isLastPage 'disabled' null}}
-            {{on 'click' @onLastPage}}
+            {{on 'click' this.onLastPage}}
           >
             <Saetta::Heroicon @icon='chevron-double-right' />
           </button>
         </div>
         <div class='font-semibold rounded-b'>
           Pagina
-          {{@pagination.number}}
+          {{@currentPage}}
           di
-          {{@pagination.totalPages}}
-          ({{@pagination.totalRecords}}
+          {{@totalPages}}
+          ({{@totalRecords}}
           risultati totali)
         </div>
       </div>

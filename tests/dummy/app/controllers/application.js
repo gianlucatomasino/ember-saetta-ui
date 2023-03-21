@@ -4,7 +4,7 @@ import { tracked } from '@glimmer/tracking';
 
 export default class ApplicationController extends Controller {
   @tracked optSelected;
-  @tracked pageNumber = 1;
+  @tracked currentPage = 1;
   @tracked totalRecords = 100;
   @tracked totalPages = 3;
 
@@ -18,31 +18,8 @@ export default class ApplicationController extends Controller {
     console.log(`Searching... ${value}`);
   }
 
-  get pagination() {
-    return {
-      number: this.pageNumber,
-      totalPages: this.totalPages,
-      totalRecords: this.totalRecords,
-    };
-  }
-
   @action
-  onFirstPage() {
-    this.pageNumber = 1;
-  }
-
-  @action
-  onNextPage() {
-    this.pageNumber++;
-  }
-
-  @action
-  onPreviousPage() {
-    this.pageNumber--;
-  }
-
-  @action
-  onLastPage() {
-    this.pageNumber = this.totalPages;
+  onPageChange(page) {
+    this.currentPage = page;
   }
 }
