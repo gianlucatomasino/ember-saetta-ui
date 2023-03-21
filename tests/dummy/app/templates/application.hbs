@@ -1,4 +1,4 @@
-<div class='p-5 bg-gray-100'>
+<div class='p-5 bg-gray-50'>
   <Saetta::Stack @direction='col'>
     <Saetta::Stack @direction='row'>
       <Saetta::Button @text='XSmall button' @color='primary' @size='xsmall' />
@@ -34,6 +34,17 @@
         @options={{(array 'Option 1' 'Option 2')}}
         @selected={{this.optSelected}}
         @onChange={{this.onOptionSelected}}
+        @alignment='left'
+        as |option|
+      >
+        {{option}}
+      </Saetta::Select>
+      <Saetta::Select
+        @label='Select an option'
+        @options={{(array 'Option 1' 'Option 2')}}
+        @selected={{this.optSelected}}
+        @onChange={{this.onOptionSelected}}
+        @alignment='right'
         as |option|
       >
         {{option}}
@@ -43,6 +54,7 @@
         @placeholder='Insert a text'
         @onSearch={{this.search}}
       />
+      <Saetta::Toggle @label='Toggle' />
     </Saetta::Stack>
 
     <Saetta::Stack @width='full'>
@@ -88,8 +100,6 @@
       <Saetta::Text @text='This is a bold text' @weight='bold' />
     </Saetta::Stack>
 
-    <Saetta::Stack>
-      <Saetta::Toggle @label='Toggle' />
-    </Saetta::Stack>
+    <Saetta::Stack />
   </Saetta::Stack>
 </div>

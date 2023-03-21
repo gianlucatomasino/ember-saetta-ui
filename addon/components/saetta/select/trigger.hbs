@@ -1,6 +1,6 @@
 <Saetta::Stack @mainAlignment='end' @height='full' as |Stack|>
   <Stack.item @canGrow={{true}} @padding={{(hash left='2')}}>
-    <div class='text-gray-800'>
+    <div class='text-gray-800 {{text-alignment @alignment}}'>
       {{@selected}}
     </div>
   </Stack.item>

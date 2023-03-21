@@ -1,9 +1,4 @@
-<Saetta::Stack
-  @direction='col'
-  @crossAlignment='start'
-  @density='compact'
-  as |Stack|
->
+<Saetta::Stack @direction='col' @crossAlignment='start' as |Stack|>
   {{#if @label}}
     <Stack.item>
       <div class='text-xs font-medium pl-0.5'>{{@label}}</div>

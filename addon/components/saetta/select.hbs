@@ -14,13 +14,20 @@
       class='border border-gray-300 rounded shadow-md h-9 w-36 bg-white'
       @options={{@options}}
       @selected={{@selected}}
-      @triggerComponent={{component 'saetta/select/trigger' selected=@selected}}
+      @triggerComponent={{component
+        'saetta/select/trigger'
+        selected=@selected
+        alignment=@alignment
+      }}
       @dropdownClass='shadow-md rounded border w-full'
       @onChange={{this.onChange}}
       @renderInPlace={{true}}
       as |option|
     >
-      <div class='py-1 px-2 hover:bg-gray-100 cursor-pointer text-gray-800'>
+      <div
+        class='py-1 px-2 hover:bg-gray-100 cursor-pointer text-gray-800
+          {{text-alignment @alignment}}'
+      >
         {{yield option}}
       </div>
     </PowerSelect>
