@@ -16,7 +16,9 @@
       <thead class='bg-neutral-200'>
         <tr class='{{text-alignment @colAlignment}}'>
           {{#each @cols as |col|}}
-            <th class='{{table-density @density}}'>{{col}}</th>
+            <th class='{{table-density @density}}'>
+              {{col}}
+            </th>
           {{/each}}
         </tr>
       </thead>
