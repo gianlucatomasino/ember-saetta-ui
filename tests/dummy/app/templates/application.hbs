@@ -1,4 +1,4 @@
-<div class='p-5'>
+<div class='p-5 bg-gray-100'>
   <Saetta::Stack @direction='col'>
     <Saetta::Stack @direction='row'>
       <Saetta::Button @text='XSmall button' @color='primary' @size='xsmall' />
@@ -70,6 +70,21 @@
           <Row.col>Data 6</Row.col>
         </Table.row>
       </Saetta::Table>
+    </Saetta::Stack>
+
+    <Saetta::Stack>
+      <Saetta::Text @text='This is a xsmall text' @size='xsmall' />
+      <Saetta::Text @text='This is a small text' @size='small' />
+      <Saetta::Text @text='This is a normal text' @size='normal' />
+      <Saetta::Text @text='This is a large text' @size='large' />
+      <Saetta::Text @text='This is a xlarge text' @size='xlarge' />
+    </Saetta::Stack>
+
+    <Saetta::Stack>
+      <Saetta::Text @text='This is a light text' @weight='light' />
+      <Saetta::Text @text='This is a normal text' @weight='normal' />
+      <Saetta::Text @text='This is a medium text' @weight='medium' />
+      <Saetta::Text @text='This is a bold text' @weight='bold' />
     </Saetta::Stack>
   </Saetta::Stack>
 </div>
