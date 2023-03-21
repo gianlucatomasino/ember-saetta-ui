@@ -10,6 +10,8 @@ export default helper(function textSize([size]) {
       return 'text-lg';
     case 'xlarge':
       return 'text-xl';
+    case '2xlarge':
+      return 'text-2xl';
     case 'normal':
     default:
       return 'text-base';
