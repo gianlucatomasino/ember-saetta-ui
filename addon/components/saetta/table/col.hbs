@@ -1,3 +1,7 @@
-<td class='{{table-density @density}} {{text-alignment @align}}' ...attributes>
+<td
+  class='{{table-density @density}}
+    {{text-alignment (with-default @align def='left')}}'
+  ...attributes
+>
   {{yield}}
 </td>
