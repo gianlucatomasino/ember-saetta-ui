@@ -2,7 +2,7 @@
   @crossAlignment='stretch'
   @direction='col'
   @width={{@width}}
-  @border='all'
+  @border={{with-default @border def='all'}}
   @shadow={{with-default @shadow def='all'}}
   @density='none'
   as |Stack|

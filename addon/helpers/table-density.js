@@ -6,6 +6,8 @@ export default helper(function density([density]) {
       return 'p-2';
     case 'compact':
       return 'p-1';
+    case 'none':
+      return 'p-0';
     default:
       return 'p-3';
   }
