@@ -1,0 +1,8 @@
+<div
+  class='grid
+    {{grid-cols @cols}}
+    {{density @density}}
+    {{size width=@width height=@height}}'
+>
+  {{yield (hash item=(component 'saetta/grid/item'))}}
+</div>

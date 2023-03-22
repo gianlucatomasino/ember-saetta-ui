@@ -1,0 +1,48 @@
+<div
+  class='text-xs pr-5
+    {{table-density @density}}
+    border-t border-gray-300 flex flex-row items-center bg-white rounded-b'
+>
+  <div class='grow'>
+    <button
+      type='button'
+      class='p-1 text-gray-800 rounded disabled:opacity-25'
+      disabled={{if this.isFirstPage 'disabled' null}}
+      {{on 'click' this.onFirstPage}}
+    >
+      <Saetta::Heroicon @icon='chevron-double-left' />
+    </button>
+    <button
+      type='button'
+      class='p-1 text-gray-800 rounded disabled:opacity-25'
+      disabled={{if this.isFirstPage 'disabled' null}}
+      {{on 'click' this.onPreviousPage}}
+    >
+      <Saetta::Heroicon @icon='chevron-left' />
+    </button>
+    <button
+      type='button'
+      class='p-1 text-gray-800 rounded disabled:opacity-25'
+      disabled={{if this.isLastPage 'disabled' null}}
+      {{on 'click' this.onNextPage}}
+    >
+      <Saetta::Heroicon @icon='chevron-right' />
+    </button>
+    <button
+      type='button'
+      class='p-1 text-gray-800 rounded disabled:opacity-25'
+      disabled={{if this.isLastPage 'disabled' null}}
+      {{on 'click' this.onLastPage}}
+    >
+      <Saetta::Heroicon @icon='chevron-double-right' />
+    </button>
+  </div>
+  <div class='font-semibold rounded-b'>
+    Pagina
+    {{@currentPage}}
+    di
+    {{@totalPages}}
+    ({{@totalRecords}}
+    risultati totali)
+  </div>
+</div>

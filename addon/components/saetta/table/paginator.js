@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 
-export default class SaettaTableComponent extends Component {
+export default class SaettaTablePaginatorComponent extends Component {
   get isFirstPage() {
     if (this.args.currentPage === 1) return true;
     return false;

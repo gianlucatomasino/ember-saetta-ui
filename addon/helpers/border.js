@@ -1,6 +1,5 @@
 import { helper } from '@ember/component/helper';
 import { typeOf } from '@ember/utils';
-import { isPresent } from '@ember/utils';
 
 export default helper(function border([value]) {
   if (value === 'all') {
